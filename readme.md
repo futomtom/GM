@@ -1,4 +1,4 @@
-* MVVM design partern. 
+* MVVM design pattern. 
 * Diffable data source
 * Decode JSON with Codable
 * Dynamic cell height
