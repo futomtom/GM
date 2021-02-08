@@ -19,7 +19,7 @@ final class ViewModel: NSObject {
 
     func fetchCommits(page: Int = 0) {
         isLoading = true
-        let commitPublisher = api.commitPublisher(page: page).sink { _ in
+        api.commitPublisher(page: page).sink { _ in
             self.isLoading = false
         } receiveValue: { commits in
             self.isLoading = false
