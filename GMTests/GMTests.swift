@@ -5,11 +5,10 @@
 //  Created by Alex Fu on 2/6/21.
 //
 
-import XCTest
 @testable import GM
+import XCTest
 
 class GMTests: XCTestCase {
-
     override func setUpWithError() throws {
         // Put setup code here. This method is called before the invocation of each test method in the class.
     }
@@ -25,9 +24,8 @@ class GMTests: XCTestCase {
 
     func testPerformanceExample() throws {
         // This is an example of a performance test case.
-        self.measure {
+        measure {
             // Put the code you want to measure the time of here.
         }
     }
-
 }

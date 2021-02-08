@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		8239313925D0FE4200908258 /* GithubAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8239313825D0FE4200908258 /* GithubAPI.swift */; };
+		8239313D25D10EB200908258 /* CommitCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8239313C25D10EB200908258 /* CommitCollectionViewCell.swift */; };
 		82796F3E25CF734D0059482D /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82796F3D25CF734D0059482D /* AppDelegate.swift */; };
 		82796F4025CF734D0059482D /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82796F3F25CF734D0059482D /* SceneDelegate.swift */; };
 		82796F4225CF734D0059482D /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82796F4125CF734D0059482D /* ViewController.swift */; };
@@ -14,6 +16,8 @@
 		82796F4725CF734E0059482D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 82796F4625CF734E0059482D /* Assets.xcassets */; };
 		82796F4A25CF734E0059482D /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 82796F4825CF734E0059482D /* LaunchScreen.storyboard */; };
 		82796F5525CF734E0059482D /* GMTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82796F5425CF734E0059482D /* GMTests.swift */; };
+		82796F7C25CF76D40059482D /* ViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82796F7B25CF76D40059482D /* ViewModel.swift */; };
+		82796F8025CF77F20059482D /* Commit.swift in Sources */ = {isa = PBXBuildFile; fileRef = 82796F7F25CF77F20059482D /* Commit.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -27,6 +31,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		8239313825D0FE4200908258 /* GithubAPI.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GithubAPI.swift; sourceTree = "<group>"; };
+		8239313C25D10EB200908258 /* CommitCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CommitCollectionViewCell.swift; sourceTree = "<group>"; };
+		8239314825D1231600908258 /* RevealServer.xcframework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcframework; path = RevealServer.xcframework; sourceTree = "<group>"; };
 		82796F3A25CF734D0059482D /* GM.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = GM.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		82796F3D25CF734D0059482D /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		82796F3F25CF734D0059482D /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -38,6 +45,8 @@
 		82796F5025CF734E0059482D /* GMTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = GMTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		82796F5425CF734E0059482D /* GMTests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GMTests.swift; sourceTree = "<group>"; };
 		82796F5625CF734E0059482D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		82796F7B25CF76D40059482D /* ViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewModel.swift; sourceTree = "<group>"; };
+		82796F7F25CF77F20059482D /* Commit.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Commit.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,12 +67,29 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		8239313725D0FE1B00908258 /* API */ = {
+			isa = PBXGroup;
+			children = (
+				8239313825D0FE4200908258 /* GithubAPI.swift */,
+			);
+			path = API;
+			sourceTree = "<group>";
+		};
+		8239314725D1231600908258 /* Frameworks */ = {
+			isa = PBXGroup;
+			children = (
+				8239314825D1231600908258 /* RevealServer.xcframework */,
+			);
+			name = Frameworks;
+			sourceTree = "<group>";
+		};
 		82796F3125CF734D0059482D = {
 			isa = PBXGroup;
 			children = (
 				82796F3C25CF734D0059482D /* GM */,
 				82796F5325CF734E0059482D /* GMTests */,
 				82796F3B25CF734D0059482D /* Products */,
+				8239314725D1231600908258 /* Frameworks */,
 			);
 			sourceTree = "<group>";
 		};
@@ -79,6 +105,9 @@
 		82796F3C25CF734D0059482D /* GM */ = {
 			isa = PBXGroup;
 			children = (
+				8239313725D0FE1B00908258 /* API */,
+				82796F7A25CF76900059482D /* Model */,
+				82796F7925CF75190059482D /* Cell */,
 				82796F3D25CF734D0059482D /* AppDelegate.swift */,
 				82796F3F25CF734D0059482D /* SceneDelegate.swift */,
 				82796F4125CF734D0059482D /* ViewController.swift */,
@@ -97,6 +126,23 @@
 				82796F5625CF734E0059482D /* Info.plist */,
 			);
 			path = GMTests;
+			sourceTree = "<group>";
+		};
+		82796F7925CF75190059482D /* Cell */ = {
+			isa = PBXGroup;
+			children = (
+				8239313C25D10EB200908258 /* CommitCollectionViewCell.swift */,
+			);
+			path = Cell;
+			sourceTree = "<group>";
+		};
+		82796F7A25CF76900059482D /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				82796F7B25CF76D40059482D /* ViewModel.swift */,
+				82796F7F25CF77F20059482D /* Commit.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -199,8 +245,12 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				82796F8025CF77F20059482D /* Commit.swift in Sources */,
+				8239313D25D10EB200908258 /* CommitCollectionViewCell.swift in Sources */,
+				82796F7C25CF76D40059482D /* ViewModel.swift in Sources */,
 				82796F4225CF734D0059482D /* ViewController.swift in Sources */,
 				82796F3E25CF734D0059482D /* AppDelegate.swift in Sources */,
+				8239313925D0FE4200908258 /* GithubAPI.swift in Sources */,
 				82796F4025CF734D0059482D /* SceneDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -371,6 +421,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alex.GM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
@@ -390,6 +441,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
+				OTHER_LDFLAGS = "";
 				PRODUCT_BUNDLE_IDENTIFIER = com.alex.GM;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
